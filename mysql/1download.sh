@@ -1,2 +1,2 @@
-docker pull mysql:latest
+docker pull mysql:8.0.23
 

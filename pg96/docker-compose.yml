@@ -13,5 +13,5 @@ services:
       - ../../../ro:/ro:ro
       - ../../../rw:/rw
       - ../../../Downloads:/dl:ro
-      - ../data/pg96:/var/lib/postgresql/data/
+      - ../.data/pg96:/var/lib/postgresql/data/
     container_name: pg_0

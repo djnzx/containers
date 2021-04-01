@@ -12,5 +12,5 @@ services:
       - ../../../ro:/ro:ro
       - ../../../rw:/rw
       - ../../../Downloads:/dl:ro
-      - ../data/cas311:/var/lib/cassandra
+      - ../.data/cas311:/var/lib/cassandra
     container_name: cas_0
