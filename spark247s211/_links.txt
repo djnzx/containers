@@ -1,4 +1,3 @@
----
 https://www.alibabacloud.com/help/doc-detail/43753.htm?spm=a2c63.p38356.b99.40.81f87cf9B454Km
 ---
 http://spark.apache.org/sql/
@@ -9,8 +8,7 @@ https://spark.apache.org/docs/2.4.7/sql-programming-guide.html
 https://spark.apache.org/docs/2.4.7/structured-streaming-programming-guide.html
 https://spark.apache.org/docs/2.4.7/streaming-programming-guide.html
 ---
-++https://www.big-data-europe.eu/developing-spark-applications-with-docker-and-bde/
-
+https://www.big-data-europe.eu/developing-spark-applications-with-docker-and-bde/
 https://www.kdnuggets.com/2020/07/apache-spark-cluster-docker.html
 https://medium.com/@myrainbowandsky_76591/make-a-loacal-2-node-spark-cluster-with-docker-on-ubuntu-be5a8ea79c89
 https://www.waitingforcode.com/apache-spark/docker-images-apache-spark-applications/read
@@ -22,12 +20,5 @@ https://bitnami.com/stack/spark/containers
 ---
 https://www.kdnuggets.com/2020/07/apache-spark-cluster-docker.html
 https://github.com/jupyter/docker-stacks
-
 https://github.com/big-data-europe
-++https://github.com/big-data-europe/docker-spark
-
----
-https://docs.docker.com/engine/reference/commandline/build/
----
-docker build . -t alexr/s247-h27        => alexr/s247-h27
----
+https://github.com/big-data-europe/docker-spark
