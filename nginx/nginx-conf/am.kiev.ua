@@ -6,7 +6,7 @@ server {
     ssl_certificate_key /etc/nginx/certs/server.key;
 
     location / {
-        proxy_pass  http://host.docker.internal:8080;
+        proxy_pass  http://back-api:8080;
     }
 }
 

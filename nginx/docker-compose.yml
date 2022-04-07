@@ -1,9 +1,18 @@
 version: '3'
 
 services:
+
+  back-api:
+    image: back:0.0.1
+    container_name: back-api
+    ports:
+      - '8080:8080'
+
   nginx:
     image: alexr/nginx:latest
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '443:443'
     container_name: ngx_0
+    links:
+      - back-api
