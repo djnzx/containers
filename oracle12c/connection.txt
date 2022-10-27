@@ -1,0 +1,8 @@
+host:      localhost
+conn type: SID
+SID:       database001
+port:      1521
+driver:    Thin
+login:     SYSTEM
+pass:      oracle
+full url:  jdbc:oracle:thin:@localhost:1521:database001

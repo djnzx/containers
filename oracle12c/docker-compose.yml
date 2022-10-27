@@ -1,0 +1,18 @@
+# https://hub.docker.com/r/absolutapps/oracle-12c-ee
+
+version: '3.3'
+
+services:
+  oracle12c:
+    image: absolutapps/oracle-12c-ee
+    restart: unless-stopped
+    environment:
+      ORACLE_SID: database001
+    ports:
+      - '1521:1521'
+    volumes:
+      - ../.data/oradata12c:/u01/app/oracle
+      - ../../../ro:/ro:ro
+      - ../../../rw:/rw
+      - ../../../Downloads:/dl:ro
+    container_name: oracle_0
