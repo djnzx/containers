@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER alexr (a77x77@gmail.com)
 
-RUN apt-get update -y
+RUN apt-get update -y && apt-get install -y net-tools && apt-get install -y iputils-ping && apt-get install -y curl
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update -y

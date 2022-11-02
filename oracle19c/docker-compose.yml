@@ -1,0 +1,23 @@
+# https://github.com/debezium/oracle-vagrant-box
+# docker run --name dbz_oracle -p 1521:1521 -e ORACLE_PWD=top_secret -v /home/vagrant/oradata/:/opt/oracle/oradata oracle/database:19.3.0-ee
+
+version: '3.3'
+
+services:
+  oracle19c:
+    image: oracle/database:19.3.0-ee
+    restart: unless-stopped
+    environment:
+      ORACLE_PWD: top_secret
+    ports:
+      - '1521:1521'
+    volumes:
+      - ../.data/oradata19c:/opt/oracle/oradata
+      - ../../../ro:/ro:ro
+      - ../../../rw:/rw
+      - ../../../Downloads:/dl:ro
+    container_name: dbz_oracle_0
+networks:
+  default:
+    external:
+      name: o_network

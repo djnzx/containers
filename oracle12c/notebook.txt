@@ -1,0 +1,26 @@
+gosu oracle sqlplus / as SYSDBA
+archive log list
+Database log mode          No Archive Mode
+Automatic archival         Disabled
+Archive destination        /u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/arch
+Oldest online log sequence     11
+Current log sequence           13
+
+shutdown immediate;
+startup mount;
+alter database archivelog;
+alter database open;
+select open_mode from v$database;
+
+SQL> archive log list;
+Database log mode          Archive Mode
+Automatic archival         Enabled
+Archive destination        /u01/app/oracle/product/12.1.0.2/dbhome_1/dbs/arch
+Oldest online log sequence     11
+Next log sequence to archive   13
+Current log sequence           13
+
+
+createdb
+---------------
+gosu oracle sqlplus / as SYSDBA

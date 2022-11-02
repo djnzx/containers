@@ -1,0 +1,35 @@
+-------------------------------------
+1st run:    docker-compose up --build
+normal run: docker-compose up
+-------------------------------------
+host:       localhost
+conn type:  SID
+SID:        ORCLCDB
+port:       1521
+driver:     Thin
+login:      SYSTEM
+pass:       oracle
+full url:   jdbc:oracle:thin:@localhost:1521:ORCLCDB
+-------------------------------------
+host:       localhost
+conn type:  Service Name
+SID:        ORCLPDB1
+port:       1521
+driver:     Thin
+login:      debezium
+pass:       dbz
+full url:   jdbc:oracle:thin:@//localhost:1521/ORCLPDB1
+-------------------------------------
+cat setup-logminer.sh | docker exec -i dbz_oracle_0 bash
+-------------------------------------
+Enable `archive log`:
+-------------------------------------
+docker exec -it dbz_oracle_0 bash
+ sqlplus / as SYSDBA
+  archive log list;
+  shutdown immediate;
+  startup mount;
+  alter database archivelog;
+  alter database open;
+  archive log list;
+  select open_mode from v$database;
