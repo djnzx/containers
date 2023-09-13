@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  elastic68:
+    image: elasticsearch:6.8.23
+    restart: unless-stopped
+    environment:
+      discovery.type: 'single-node'
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    volumes:
+      - ../../../ro:/ro:ro
+      - ../../../rw:/rw
+      - ../../../Downloads:/dl:ro
+    container_name: es_68

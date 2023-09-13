@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  elastic89:
+    image: elasticsearch:8.9.2
+    restart: unless-stopped
+    environment: [ 'ES_JAVA_OPTS=-Xms2g -Xmx2g','bootstrap.memory_lock=true','discovery.type=single-node','xpack.security.enabled=false', 'xpack.security.enrollment.enabled=false' ]
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    volumes:
+      - ../../../ro:/ro:ro
+      - ../../../rw:/rw
+      - ../../../Downloads:/dl:ro
+    container_name: es_89
