@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  couchbase:
+    image: couchbase:7.6.1
+    restart: unless-stopped
+#    environment:
+#      -
+    ports:
+      - "8091-8096:8091-8096"
+      - "11210-11211:11210-11211"
+#    volumes:
+#      -
+    container_name: couch01
