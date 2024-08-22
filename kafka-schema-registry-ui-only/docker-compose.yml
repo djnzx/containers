@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  schema-registry-ui:
+    image: landoop/schema-registry-ui
+    restart: always
+    environment:
+      SCHEMAREGISTRY_URL: "http://localhost:8081"
+      PROXY: "true"
+    ports:
+      - "8001:8000"
+    container_name: sr_ui_0
+    volumes: []
