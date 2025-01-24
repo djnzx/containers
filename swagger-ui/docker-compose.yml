@@ -1,0 +1,11 @@
+# put your openapi.json
+# to ./.data/sw folder
+services:
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    environment:
+      SWAGGER_JSON: /oa/openapi.json
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../.data/sw:/oa
