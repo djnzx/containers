@@ -1,6 +1,5 @@
-version: '2'
 services:
   redis:
-    image: 'redis:5.0.10-alpine'
+    image: 'redis:8'
     ports:
       - '6379:6379'

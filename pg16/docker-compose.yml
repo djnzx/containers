@@ -1,7 +1,5 @@
-version: '3.3'
-
 services:
-  postgres:
+  pg16:
     image: postgres:16
     restart: unless-stopped
     environment:
@@ -14,4 +12,4 @@ services:
       - ../../../rw:/rw
       - ../../../Downloads:/dl:ro
       - ../.data/pg16:/var/lib/postgresql/data/
-    container_name: pg16
+    container_name: pg16_0
